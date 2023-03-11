@@ -29,20 +29,20 @@ const Nav: React.FC = () => {
         Home
       </NavLink>
       <NavLink
-        to={"/confession"}
+        to={"/Movies"}
         className={({ isActive }) =>
           isActive ? activeClassName : inactiveClassName
         }
       >
-        Confession
+        Movies
       </NavLink>
       <NavLink
-        to={"/misdemeanour"}
+        to={"/About"}
         className={({ isActive }) =>
           isActive ? activeClassName : inactiveClassName
         }
       >
-        Misdemeanour
+        About
       </NavLink>
       <a className="nav__a--icon" onClick={iconOnClick}>
         +

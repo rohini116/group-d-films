@@ -2,7 +2,7 @@
   --black: #000;
   --white: #fff;
   --grey: #666;
-  --light_grey: #867d8d;
+  --light_grey: #c9bbd3;
   --purple: #5a0389;
 }
 #root {
@@ -70,6 +70,7 @@ footer {
 
 .nav__a {
   float: left;
+  min-width: 20%;
   display: block;
   color: var(--white);
   text-align: center;
