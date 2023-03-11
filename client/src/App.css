@@ -13,24 +13,27 @@
 .App {
   display: flex;
   flex-direction: column;
-  min-width: 500px;
+  min-width: 600px;
   min-height: 100vh;
-}
-
-main {
-  width: 100%;
-  margin: auto;
-  flex: 1 0 auto;
-}
-
-footer {
-  margin-top: auto;
 }
 
 header,
 main,
 footer {
   flex-shrink: 0;
+}
+
+main {
+  width: 100%;
+  margin: auto;
+  flex: 1 0 auto;
+  position: relative;
+  background-color: var(--black);
+  /* height: 1500px; */
+}
+
+footer {
+  margin-top: auto;
 }
 
 footer {
@@ -40,4 +43,38 @@ footer {
   color: var(--white);
   font-size: 12px;
   border-top: 1px solid rgba(217, 217, 217, 0.3);
+}
+
+/* home */
+.home {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.home__bg {
+  opacity: 0.3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* height: auto; */
+  transform: none;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.homeSearch {
+  position: relative;
+  width: 80%;
+  height: 100px;
+  border: 2px solid var(--white);
+  margin: 50px auto;
+  z-index: 1;
+}
+
+.homeTrending {
+  position: relative;
+  color: var(--white);
+  z-index: 1;
 }
