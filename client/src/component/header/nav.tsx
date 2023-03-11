@@ -29,7 +29,7 @@ const Nav: React.FC = () => {
         Home
       </NavLink>
       <NavLink
-        to={"/Movies"}
+        to={"/movies"}
         className={({ isActive }) =>
           isActive ? activeClassName : inactiveClassName
         }
@@ -37,7 +37,7 @@ const Nav: React.FC = () => {
         Movies
       </NavLink>
       <NavLink
-        to={"/About"}
+        to={"/about"}
         className={({ isActive }) =>
           isActive ? activeClassName : inactiveClassName
         }
