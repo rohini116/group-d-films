@@ -127,6 +127,7 @@ footer {
     top: 0;
   }
   .nav--responsive .nav__a {
+    padding-left: 2em;
     float: none;
     display: block;
     text-align: left;
