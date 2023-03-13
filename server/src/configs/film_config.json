@@ -1,0 +1,4 @@
+{
+    "start-dev": "NODE_ENV=dev nodemon src/server.ts log-server-output",
+    "start-prod": "NODE_ENV=production nodemon src/server.ts log-server-output"
+}
