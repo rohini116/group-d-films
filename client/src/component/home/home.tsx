@@ -4,7 +4,7 @@ import HomeTrending from "./homeTrending";
 
 const Home: React.FC = () => {
   return (
-    <div className="home">
+    <div data-testid="home" className="home">
       <HomeBg />
       <HomeSearch />
       <HomeTrending />

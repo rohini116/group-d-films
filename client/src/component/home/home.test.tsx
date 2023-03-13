@@ -3,6 +3,6 @@ import Home from "./home";
 
 test("Given the Home, When the component is rendered, Then the element should be present", () => {
   render(<Home />);
-  const homeBg = screen.getByTestId("home-bg");
-  expect(homeBg).toBeInTheDocument();
+  const home = screen.getByTestId("home");
+  expect(home).toBeInTheDocument();
 });
