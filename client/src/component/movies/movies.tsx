@@ -1,5 +1,5 @@
-const Moveis: React.FC = () => {
+const Movies: React.FC = () => {
   return <>Movies</>;
 };
 
-export default Moveis;
+export default Movies;
