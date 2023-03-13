@@ -3,7 +3,7 @@ import bgImage from "../../assets/bg.jpg";
 const HomeBg: React.FC = () => {
   return (
     <>
-      <img className="home__bg" src={bgImage} />
+      <img data-testid="home-bg" className="home__bg" src={bgImage} />
     </>
   );
 };
