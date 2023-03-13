@@ -1,35 +1,47 @@
 import * as express from "express";
 import { Express } from "express";
+import { LOG_SERVER_OUTPUT } from "../app";
+import film from "./film";
+import genre from "./genre";
+import user from "./user";
+import * as homeController from '../controllers/home_controller'
 
 export const router = express.Router();
 
-export function initialiseRoutes(app: Express, logServerOutput = true) {
-    addBaseRouter(app, logServerOutput);
-    addAPIRoutes(app, logServerOutput);
+export function initialiseRoutes(app: Express) {
+    addBaseRouter(app);
+    addAPIRoutes(app);
 }
 
-function addBaseRouter(app: Express, logServerOutput = true) {
+function addBaseRouter(app: Express) {
     router.use((req, res, next) => {
 		res.header("Access-Control-Allow-Methods", "GET");
-		if(logServerOutput) console.log(`📨 ${req.url}`);
+		if(LOG_SERVER_OUTPUT) console.log(`📨 ${req.url}`);
 		next();
 	});
 
-    if(logServerOutput) console.log("🏠❤️‍🩹  Adding home health check route...");
-    router.get("/", (req, res) => {
+    if(LOG_SERVER_OUTPUT) console.log("🏠❤️‍🩹  Adding home health check route...");
+    router.get("/health", (req, res) => {
         res.status(200).send("👍 Okay! The server is responding! 🙌");
     });
 
-    if(logServerOutput) console.log("🛠️  Applying base router to Express server...");
+	router.get("/", homeController.getHomePage);
+
+    if(LOG_SERVER_OUTPUT) console.log("🛠️  Applying base router to Express server...");
 	app.use("/", router);
 }
 
-function addAPIRoutes(app: Express, showInfo = true) {
+function addAPIRoutes(app: Express) {
     const apiRouter = express.Router();
 
 	apiRouter.use((req, res, next) => {
-		// we'll use this router to return specifically JSON
 		res.setHeader("Content-Type", "application/json");
 		next();
 	});
+
+	apiRouter.use("/user", user);
+	apiRouter.use("/film", film);
+	apiRouter.use("/genre", genre);
+
+	app.use("/", apiRouter);
 }

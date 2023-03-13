@@ -11,5 +11,5 @@ export const LOG_SERVER_OUTPUT = arr.find(arg => arg === 'log-server-output') !=
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-initialiseRoutes(app, LOG_SERVER_OUTPUT);
+initialiseRoutes(app);
 

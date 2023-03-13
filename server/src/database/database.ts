@@ -1,4 +1,5 @@
-import { Sequelize } from "sequelize";
+import { DataTypes, Sequelize } from "sequelize";
 
 // TODO: This should be external config
-export const sequelize = new Sequelize("sqlite::memory:");
+//export const sequelize = new Sequelize("sqlite::memory:");
+
