@@ -3,8 +3,6 @@ import App from "./App";
 
 test("Given the App, When the component is rendered, Then the text should be present", () => {
   render(<App />);
-  const text = screen.getByText(
-    /Click on the Vite and React logos to learn more/i
-  );
+  const text = screen.getByText(/Home/i);
   expect(text).toBeInTheDocument();
 });
