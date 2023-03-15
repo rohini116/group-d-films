@@ -1,0 +1,17 @@
+{
+    "name": "group-d-films-main",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start-server": "cd server && npm start",
+        "start-client": "cd client && npm run dev",
+        "start": "concurrently -n client,server -c cyan,magenta \"npm run start-client\" \"npm run start-server\""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "concurrently": "^7.6.0"
+    }
+}
