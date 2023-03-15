@@ -16,3 +16,13 @@ export async function handleJsonResponse<T>(req: Request, res: Response,
         res.status(successCode).json(data);
     }
 }
+
+export async function sendErrorMessageResponse<T>(req: Request, res: Response,
+    data : string, errorCode = 400) {
+    res.status(errorCode).json({ success : false, message : data });
+}
+
+export async function sendSuccessMessageResponse<T>(req: Request, res: Response,
+    data : string, successCode = 200) {
+    res.status(successCode).json({ success : true, message : data });
+}

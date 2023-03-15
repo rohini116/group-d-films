@@ -12,3 +12,8 @@ export async function getFilm(id : string) {
 	return await filmModel.getFilm(id);
 }
 
+export async function getFilmsByGenre(genreIds : string, page : string) {
+	return await filmModel.getFilmsByGenre(genreIds, page);
+}
+
+

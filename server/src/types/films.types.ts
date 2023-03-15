@@ -1,6 +1,63 @@
 
 /**
- *  Result for:
+ * to send a message (eg error message) to the client
+ */
+export type ServerMessage = {
+    success:            boolean;
+    message:            string;
+}
+
+export type User = {
+    id?:                 number;
+    name?:               string;
+}
+
+/**
+ * Configuration object returned by
+ * http://localhost:5000/configuration
+ * (https://api.themoviedb.org/3/configuration)
+ * 
+ * provides the base URL for images etc
+ * and the available image sizes
+ * 
+ * image format is:
+ *  base_url + backdrop_size + backdrop_path
+ * eg
+ *  http://image.tmdb.org/t/p/w780/wxaBkuqVIgImjRHEMJoxL9Lq6i8.jpg
+ * 
+ */
+export type MovieAPIConfig = {
+    images?:              Images;
+    change_keys?:         string[];
+}
+
+export type Images = {
+    base_url?:        string;
+    secure_base_url?: string;
+    backdrop_sizes?:  string[];
+    logo_sizes?:      string[];
+    poster_sizes?:    string[];
+    profile_sizes?:   string[];
+    still_sizes?:     string[];
+}
+
+/**
+ * List of Genre objects returned by
+ *  http://localhost:5000/genre
+ *  (https://api.themoviedb.org/3/genre/movie/list)
+ */
+export type GenreList = {
+    genres?: Genre[];
+}
+
+export type Genre = {
+    id?:   number;
+    name?: string;
+}
+
+/**
+ *  Film object returned by
+ *  http://localhost:5000/film/{movie_id}
  *  https://api.themoviedb.org/3/movie/{movie_id}
  */
 export type Film = {
@@ -31,11 +88,6 @@ export type Film = {
     vote_count?:            number;
 }
 
-export type Genre = {
-    id?:   number;
-    name?: string;
-}
-
 export type ProductionCompany = {
     id?:             number;
     logo_path?:      null | string;
@@ -55,55 +107,60 @@ export type SpokenLanguage = {
 }
 
 /**
- *  Result for:
- *  https://api.themoviedb.org/3/movie/top_rated
+ *  Film objects returned by
+ *  http://localhost:5000/film/trending/day
+ *  http://localhost:5000/film/trending/week
+ * 
+ *  Also returned by
+ *  http://localhost:5000/film/top_rated
+ *  
+ *  (https://api.themoviedb.org/3/trending/movie/day)
+ *  (https://api.themoviedb.org/3/trending/movie/week)
+ *  (https://api.themoviedb.org/3/movie/top_rated)
  */
-export type FilmList_TopRated = {
+export type FilmList_Trending = {
     page?:          number;
-    results?:       Film_TopRated[];
+    results?:       Film_Trending[];
     total_pages?:   number;
     total_results?: number;
 }
 
-export type Film_TopRated = {
+export type Film_Trending = {
     adult?:             boolean;
     backdrop_path?:     string;
-    genre_ids?:         number[];
     id?:                number;
+    title?:             string;
     original_language?: string;
     original_title?:    string;
     overview?:          string;
-    popularity?:        number;
     poster_path?:       string;
+    media_type?:        string;     // only retured for Trending, not Top_Rated
+    genre_ids?:         number[];
+    popularity?:        number;
     release_date?:      Date;
-    title?:             string;
     video?:             boolean;
     vote_average?:      number;
     vote_count?:        number;
 }
 
 /**
- *  Result for:
- *  https://api.themoviedb.org/3/genre/movie/list
+ * All the Reviews for a film
+ *  https://api.themoviedb.org/3/movie/{movieID}/reviews
  */
-export type GenreList = {
-    genres: Genre[];
+export type Review_Results = {
+    id?:            number;
+    page?:          number;
+    results?:       Review[];
+    total_pages?:   number;
+    total_results?: number;
 }
 
-/**
- *  Result for:
- *  https://api.themoviedb.org/3/review/{reviewID}
- */
 export type Review = {
-    id?:             string;
     author?:         string;
     author_details?: AuthorDetails;
     content?:        string;
     created_at?:     Date;
-    iso_639_1?:      string;
-    media_id?:       number;
-    media_title?:    string;
-    media_type?:     string;
+    id?:             string;
     updated_at?:     Date;
     url?:            string;
 }
@@ -115,40 +172,4 @@ export type AuthorDetails = {
     rating?:      number;
 }
 
-/**
- *  Result for:
- *  https://api.themoviedb.org/3/movie/{movieID}/reviews
- */
-export type Review_Results = {
-    id?:            number;
-    page?:          number;
-    results?:       Review_Result[];
-    total_pages?:   number;
-    total_results?: number;
-}
 
-export type Review_Result = {
-    author?:         string;
-    author_details?: AuthorDetails;
-    content?:        string;
-    created_at?:     Date;
-    id?:             string;
-    updated_at?:     Date;
-    url?:            string;
-}
-
-
-
-
-/**
- * other possible types
- */
-export type User = {
-    id?:                 number;
-    name?:               string;
-}
-
-export type ServerMessage = {
-    success:            boolean;
-    message:            string;
-}

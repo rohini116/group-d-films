@@ -1,19 +1,19 @@
-import * as dotenv from "dotenv";
-const environment = process.env.NODE_ENV || "dev";
-dotenv.config({ path: `.env.${environment}` });
+import { getEnv, SERVER_PORT } from "./configs/server.config";
+const environment = getEnv();
 
 import { app, LOG_SERVER_OUTPUT } from "./app";
-//import { populateDummyData } from "./database/database_seed";
+//import { databaseInit } from "./database/database_seed";
 import { Server } from "http";
 
-const PORT = process.env.PORT;
+
+const PORT = SERVER_PORT;
 
 console.log(`🌍 Running in ${environment} environment`);
 
 try {
-	// Seed the database with some data
-	if (environment === "dev") {
-		//populateDummyData();
+	// todo for now this creates the DB new each time server is run
+	/*if (environment === "dev")*/ {
+		//databaseInit();
 	}
 
 	const server = app.listen(PORT, () => {
