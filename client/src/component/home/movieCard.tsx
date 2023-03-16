@@ -11,9 +11,11 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
 
   return (
     <div className="movieCard">
-      <h3>Title: {title}</h3>
-      <p>Release date: {release_date}</p>
-      <img title={title} src={imgUrl} />
+      <h3 className="movieCard__h3" title={title}>
+        {title}
+      </h3>
+      <p className="movieCard__p">{release_date}</p>
+      <img className="movieCard__img" title={title} src={imgUrl} />
     </div>
   );
 };

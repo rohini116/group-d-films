@@ -32,7 +32,7 @@ header {
 main {
   width: 100%;
   margin: auto;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   flex: 1 0 auto;
   position: relative;
   background-color: var(--black);
@@ -167,4 +167,37 @@ footer {
   position: relative;
   color: var(--white);
   z-index: 1;
+}
+
+.homeTrending__h2 {
+  margin: 2rem;
+}
+
+.trendingContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.movieCard {
+  border: 1px solid var(--grey);
+  width: 210px;
+  height: 350px;
+  padding: 10px;
+  line-height: 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.movieCard__h3 {
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.movieCard__p,
+.movieCard__img {
+  margin: 0;
 }
