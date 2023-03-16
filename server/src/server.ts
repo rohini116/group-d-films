@@ -4,7 +4,7 @@ const environment = getEnv();
 import { app, LOG_SERVER_OUTPUT } from "./app";
 //import { databaseInit } from "./database/database_seed";
 import { Server } from "http";
-import cors from "cors";
+//import cors from "cors";
 
 
 const PORT = SERVER_PORT;
@@ -12,8 +12,8 @@ const PORT = SERVER_PORT;
 console.log(`🌍 Running in ${environment} environment`);
 
 try {
-	app.use(cors());
-	
+	//app.use(cors());
+
 	// todo for now this creates the DB new each time server is run
 	/*if (environment === "dev")*/ {
 		//databaseInit();
