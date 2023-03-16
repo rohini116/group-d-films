@@ -5,8 +5,8 @@ import { Movie } from "../../type/movie.types";
 test("Given the required params, When the component is rendered, Then the text should be present", () => {
   const movie: Movie = {
     title: "testTitle",
-    date: "testDate",
-    imgUrl: "testURL",
+    release_date: "testDate",
+    poster_path: "testPath",
   };
 
   render(<MovieCard movie={movie} />);
