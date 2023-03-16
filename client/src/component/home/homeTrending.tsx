@@ -25,13 +25,29 @@ const HomeTrending: React.FC = () => {
 
   return (
     <div className="homeTrending">
-      <h2 className="homeTrending__h2">Now Trending</h2>
+      {isLoading && (
+        <div className="loading">
+          <p className="loading__p">l</p>
+          <p className="loading__p">o</p>
+          <p className="loading__p">a</p>
+          <p className="loading__p">d</p>
+          <p className="loading__p">i</p>
+          <p className="loading__p">n</p>
+          <p className="loading__p">g</p>
+        </div>
+      )}
 
-      <div className="trendingContainer">
-        {trendingMovies.map((movie, key) => (
-          <MovieCard key={key} movie={movie} />
-        ))}
-      </div>
+      {!isLoading && (
+        <>
+          <h2 className="homeTrending__h2">Now Trending</h2>
+
+          <div className="trendingContainer">
+            {trendingMovies.map((movie, key) => (
+              <MovieCard key={key} movie={movie} />
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };
