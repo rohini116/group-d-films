@@ -53,6 +53,10 @@ footer {
   font-size: 12px;
   border-top: 1px solid rgba(217, 217, 217, 0.3);
 }
+/* li tags */
+ul {
+  list-style-type: none;
+}
 
 /* logo */
 .logo {
