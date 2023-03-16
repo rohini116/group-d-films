@@ -229,10 +229,10 @@ ul {
   text-align: center;
   font-size: 6em;
   font-family: arial;
-  font-weight: 600;
+  font-weight: bold;
   transform: scale(0.5);
-  color: #121212;
-  -webkit-text-stroke: 2px gray;
+  color: var(--black);
+  -webkit-text-stroke: 3px gray;
 }
 
 .loading__p:nth-child(1) {

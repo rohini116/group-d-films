@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Movie } from "../../type/movie.types";
 import MovieCard from "./movieCard";
 import { fetchMovies } from "./fetchMovies";
+import Loading from "./loading";
 
 const HomeTrending: React.FC = () => {
   const [trendingMovies, setTrendingMovies] = useState<Movie[]>([]);
@@ -13,7 +14,10 @@ const HomeTrending: React.FC = () => {
         "http://localhost:5000/film/trending/day",
         10
       );
-      setTrendingMovies(movies);
+      if (movies.length !== 0) {
+        setTrendingMovies(movies);
+        setIsLoading(false);
+      }
     } catch (e) {
       console.error(e);
     }
@@ -25,17 +29,7 @@ const HomeTrending: React.FC = () => {
 
   return (
     <div className="homeTrending">
-      {isLoading && (
-        <div className="loading">
-          <p className="loading__p">l</p>
-          <p className="loading__p">o</p>
-          <p className="loading__p">a</p>
-          <p className="loading__p">d</p>
-          <p className="loading__p">i</p>
-          <p className="loading__p">n</p>
-          <p className="loading__p">g</p>
-        </div>
-      )}
+      {isLoading && <Loading />}
 
       {!isLoading && (
         <>
