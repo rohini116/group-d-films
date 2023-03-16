@@ -5,6 +5,7 @@ import { fetchMovies } from "./fetchMovies";
 
 const HomeTrending: React.FC = () => {
   const [trendingMovies, setTrendingMovies] = useState<Movie[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const getMovies = async () => {
     try {
