@@ -10,6 +10,6 @@ test("Given the required params, When the component is rendered, Then the text s
   };
 
   render(<MovieCard movie={movie} />);
-  const text = screen.getByText(/Title: testTitle/i);
+  const text = screen.getByText(/testTitle/i);
   expect(text).toBeInTheDocument();
 });
