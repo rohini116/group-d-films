@@ -4,6 +4,7 @@
   --grey: #666;
   --light_grey: #c9bbd3;
   --purple: #5a0389;
+  --orange: #f9882c;
 }
 #root {
   max-width: 1280px;
@@ -32,7 +33,7 @@ header {
 main {
   width: 100%;
   margin: auto;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   flex: 1 0 auto;
   position: relative;
   background-color: var(--black);
@@ -51,6 +52,10 @@ footer {
   color: var(--white);
   font-size: 12px;
   border-top: 1px solid rgba(217, 217, 217, 0.3);
+}
+/* li tags */
+ul {
+  list-style-type: none;
 }
 
 /* logo */
@@ -167,4 +172,44 @@ footer {
   position: relative;
   color: var(--white);
   z-index: 1;
+}
+
+.homeTrending__h2 {
+  margin: 2rem;
+  color: var(--orange);
+}
+
+.trendingContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.movieCard {
+  border: 1px solid var(--grey);
+  width: 210px;
+  height: 350px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.movieCard__title {
+  margin: 0;
+  line-height: 2rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: help;
+}
+
+.movieCard__date,
+.movieCard__img {
+  margin: 0;
+}
+
+.movieCard__date {
+  padding-bottom: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
 }

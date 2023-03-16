@@ -4,8 +4,6 @@ const environment = getEnv();
 import { app, LOG_SERVER_OUTPUT } from "./app";
 //import { databaseInit } from "./database/database_seed";
 import { Server } from "http";
-import cors from "cors";
-
 
 const PORT = SERVER_PORT;
 
@@ -31,13 +29,16 @@ try {
 	process.on("SIGTERM", () => handleShutdown(server));
 	process.on("SIGHUP", () => handleShutdown(server));
 
+  process.on("SIGINT", () => handleShutdown(server));
+  process.on("SIGTERM", () => handleShutdown(server));
+  process.on("SIGHUP", () => handleShutdown(server));
 } catch (e: unknown) {
-	console.error("🚨 Top level Error caught 🚨 ");
-	console.error((e as Error).message);
+  console.error("🚨 Top level Error caught 🚨 ");
+  console.error((e as Error).message);
 }
 
 function handleShutdown(server: Server) {
-	server.close(() => {
-		process.exit(0);
-	});
+  server.close(() => {
+    process.exit(0);
+  });
 }

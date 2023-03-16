@@ -1,5 +1,5 @@
 export type Movie = {
   title: string;
-  date: string;
-  imgUrl: string;
+  release_date: string;
+  poster_path: string;
 };
