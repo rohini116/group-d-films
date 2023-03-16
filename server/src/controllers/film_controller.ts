@@ -3,13 +3,17 @@ import  * as filmService  from '../services/films'
 import { handleJsonResponse, sendSuccessMessageResponse } from "./controller_utils";
 
 export async function getTrendingFilms(req: Request, res: Response) {   
-    const forCurrentDay = req.params.day.toLowerCase() === 'day';  
-    const result = await filmService.getTrendingFilms(forCurrentDay);
+    const day = req.params.day;
+    const forCurrentDay = (day === undefined || day.toLowerCase().startsWith('day'));
+    const page = req.params.page;  
+console.log(day + " " + forCurrentDay + " " + page);    
+    const result = await filmService.getTrendingFilms(forCurrentDay, page);
     handleJsonResponse(req, res, result);
 }
 
 export async function getTopRatedFilms(req: Request, res: Response) {  
-	const result = await filmService.getTopRatedFilms();
+    const page = req.params.page;  
+	const result = await filmService.getTopRatedFilms(page);
     handleJsonResponse(req, res, result);
 }
 

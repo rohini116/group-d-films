@@ -13,7 +13,7 @@ console.log(`🌍 Running in ${environment} environment`);
 
 try {
 	app.use(cors());
-
+	
 	// todo for now this creates the DB new each time server is run
 	/*if (environment === "dev")*/ {
 		//databaseInit();

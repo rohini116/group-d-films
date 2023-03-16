@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import path from "path";
 
 const template = `<!DOCTYPE html>
 <html lang="en">
@@ -13,5 +14,6 @@ const template = `<!DOCTYPE html>
 </html>`;
 
 export async function getHomePage(req: Request, res: Response) {
-    res.status(200).send(template);
+    //res.status(200).send(template);
+    res.sendFile(path.join(__dirname, '../../../client', 'index.html'));
 }

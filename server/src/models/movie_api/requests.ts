@@ -1,20 +1,6 @@
 import { LOG_SERVER_OUTPUT } from '../../app';
-import { MOVIE_API_KEY_NAME, MOVIE_API_KEY_VALUE } from '../../configs/credentials';
+import { buildUrl } from './request_utils';
 import { MovieServerMessage } from './types';
-
-const BASE_URL = "https://api.themoviedb.org/3";
-
-const API_KEY = MOVIE_API_KEY_NAME + '=' + MOVIE_API_KEY_VALUE;
-
-function buildUrl(url : string, params : string) {
-    if(url.startsWith('/') === false) {
-        url = '/' + url;
-    }
-    return BASE_URL 
-        + url
-        + "?" + API_KEY
-        + (params.length > 0 ? "&" + params : "");
-}
 
 /**
  * send a GET request to the movie API
@@ -23,7 +9,7 @@ function buildUrl(url : string, params : string) {
  * @param expectedDatatype - type of data being returned, this is just shown in any error messages
  * @returns T or error message string
  */
-export async function getMovieData<T>(url : string, params : string, expectedFieldName : string,
+export async function getMovieData<T>(url : string, params : string[], expectedFieldName : string,
     expectedDatatype : string) : Promise<T | string> {
     try {
         const fullUrl = buildUrl(url, params);
