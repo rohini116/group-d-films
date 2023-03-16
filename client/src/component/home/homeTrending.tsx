@@ -1,30 +1,32 @@
+import { useEffect, useState } from "react";
 import { Movie } from "../../type/movie.types";
 import MovieCard from "./movieCard";
-
-const trendingData: Movie[] = [
-  {
-    title: "Luther: The Fallen Sun",
-    date: "2023-02-24",
-    imgUrl: "/src/assets/logo.jpg",
-  },
-  {
-    title: "Everything Everywhere All at Once",
-    date: "2022-03-24",
-    imgUrl: "/src/assets/logo.jpg",
-  },
-  {
-    title: "Scream VI",
-    date: "2023-03-08",
-    imgUrl: "/src/assets/logo.jpg",
-  },
-];
+import { fetchMovies } from "./fetchMovies";
 
 const HomeTrending: React.FC = () => {
+  const [trendingMovies, setTrendingMovies] = useState<Movie[]>([]);
+
+  const getMovies = async () => {
+    try {
+      const movies = await fetchMovies(
+        "http://localhost:5000/film/trending/day",
+        5
+      );
+      setTrendingMovies(movies);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  useEffect(() => {
+    getMovies();
+  }, []);
+
   return (
     <div className="homeTrending">
       <h2>Now Trending</h2>
 
-      {trendingData.map((movie, key) => (
+      {trendingMovies.map((movie, key) => (
         <MovieCard key={key} movie={movie} />
       ))}
     </div>
