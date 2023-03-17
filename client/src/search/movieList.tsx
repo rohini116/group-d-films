@@ -36,7 +36,7 @@ const MovieList: React.FC<MovieListProps> = ({ listTitle, url, number }) => {
 
       {!isLoading && (
         <>
-          <h2 className="movieList__h2">{listTitle}</h2>
+          <h2 className="title-style">{listTitle}</h2>
 
           <div className="movieList__container">
             {movies.map((movie, key) => (
