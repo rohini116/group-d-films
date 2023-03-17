@@ -160,27 +160,25 @@ ul {
   z-index: 0;
 }
 
-.homeSearch {
+.searchMovies {
   position: relative;
   width: 80%;
-  height: 100px;
-  border: 2px solid var(--white);
   margin: 50px auto;
   z-index: 1;
 }
 
-.homeTrending {
+.movieList {
   position: relative;
   color: var(--white);
   z-index: 1;
 }
 
-.homeTrending__h2 {
+.movieList__h2 {
   margin: 2rem;
   color: var(--orange);
 }
 
-.trendingContainer {
+.movieList__container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -283,4 +281,52 @@ ul {
     color: #121212;
     -webkit-text-stroke: 2px gray;
   }
+}
+
+/* movies */
+.movies {
+  padding-bottom: 3rem;
+}
+
+/* search */
+select,
+button {
+  display: inline-block;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 20%;
+  padding: 8px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border: 2px solid #fff;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+}
+
+select {
+  width: 20%;
+}
+
+button {
+  width: 10%;
+  margin-left: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  color: var(--orange);
+}
+
+button:disabled {
+  background-color: var(--light_grey);
+  color: var(--grey);
+}
+
+button:disabled:hover {
+  color: var(--grey);
+  cursor: default;
 }
