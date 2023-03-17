@@ -1,7 +1,7 @@
 const About: React.FC = () => {
   return (
-    <div className="about">
-      <h1>Group D Films Team Members</h1>
+    <div className="background-img">
+      <h2 className="title-style--indigo">Group D Films Team Members</h2>
       <ul>
         <li>Lloyd</li>
         <li>Michelle</li>
@@ -10,7 +10,7 @@ const About: React.FC = () => {
         <li>Xuan</li>
       </ul>
     </div>
-  )
+  );
 };
 
 export default About;
