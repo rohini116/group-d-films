@@ -1,11 +1,9 @@
-import HomeBg from "./homeBg";
 import SearchMovies from "../../search/searchMovies";
 import MovieList from "../../search/movieList";
 
 const Home: React.FC = () => {
   return (
-    <div data-testid="home" className="home">
-      <HomeBg />
+    <div data-testid="home" className="home background-gradient">
       <SearchMovies />
       <MovieList
         listTitle="Now Trending"
