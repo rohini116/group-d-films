@@ -6,6 +6,7 @@ const Nav: React.FC = () => {
 
   return (
     <nav>
+
       <ul className="nav emphatic">
         <li className="nav__a">
           <NavLink
@@ -40,17 +41,8 @@ const Nav: React.FC = () => {
           </NavLink>
         </li>
 
-        <li className="nav__a">
-          <NavLink
-            to={"/health"}
-            className={({ isActive }) =>
-              isActive ? activeClassName : inactiveClassName
-            }
-          >
-            Health
-          </NavLink>
-        </li>
       </ul>
+
     </nav>
   );
 };
