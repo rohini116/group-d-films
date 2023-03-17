@@ -39,6 +39,17 @@ const Nav: React.FC = () => {
             About
           </NavLink>
         </li>
+
+        <li className="nav__a">
+          <NavLink
+            to={"/health"}
+            className={({ isActive }) =>
+              isActive ? activeClassName : inactiveClassName
+            }
+          >
+            Health
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
