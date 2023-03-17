@@ -21,11 +21,7 @@ const SearchMovies: React.FC = () => {
         }}
       >
         <GenreSelect setGenre={setGenre} />
-        <button
-          className="searchMovies__btn"
-          type="submit"
-          disabled={genre.id === 0}
-        >
+        <button className="searchMovies__btn" type="submit">
           Search
         </button>
       </form>

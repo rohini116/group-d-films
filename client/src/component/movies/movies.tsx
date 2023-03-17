@@ -4,6 +4,10 @@ import MovieList from "../../search/movieList";
 
 const Movies: React.FC = () => {
   let { genreId, genreName = "All" } = useParams();
+  if (genreId === "0") {
+    genreId = "";
+    genreName = "All";
+  }
 
   const fetchUrl = `http://localhost:5000/film/by_genre?genre_ids=${genreId}`;
   const listTitleText = `${genreName} films`;

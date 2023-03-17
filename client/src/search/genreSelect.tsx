@@ -29,7 +29,7 @@ const GenreSelect: React.FC<GenreSelectProps> = ({ setGenre }) => {
         } as Genre);
       }}
     >
-      <option value="0">- Select a genre -</option>
+      <option value="0">All genres</option>
 
       {genres.map((genre) => (
         <option key={genre.id} value={genre.id}>
