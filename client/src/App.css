@@ -73,10 +73,6 @@ footer {
   font-family: 'Special Elite';
   border-top: 1px solid rgba(217, 217, 217, 0.3);
 }
-/* li tags */
-ul {
-  list-style-type: none;
-}
 
 /* logo */
 .logo {
@@ -132,6 +128,7 @@ ul {
 }
 
 /* home */
+
 .home {
   position: relative;
   overflow: hidden;
@@ -139,12 +136,15 @@ ul {
   padding-bottom: 3rem;
 }
 
+
 .homeSearch {
   position: relative;
   width: 80%;
   margin: 50px auto;
   z-index: 1;
 }
+
+
 
 .movieList {
   position: relative;
@@ -200,3 +200,51 @@ ul {
   padding: 0.5rem;
   margin: 0;
 }
+
+/*dropdown styling*/
+
+
+
+/* Search: button and dropdown */
+.search-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 5%;
+  padding-top: 5%;
+}
+
+.container__button {
+  align-items: center;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 2.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button--active {
+  font-family: 'Special Elite';
+  font-size: 1.5em;
+  background-color: indigo;
+  color: white;
+}
+
+.container__button:focus { 
+  background-color: orange;
+  
+}
+
+.container__button:hover {
+  background-color: orange;
+
+}
+
+
+

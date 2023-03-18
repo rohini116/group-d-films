@@ -26,7 +26,7 @@ const Nav: React.FC = () => {
               isActive ? activeClassName : inactiveClassName
             }
           >
-            Movie Search
+            Search
           </NavLink>
         </li>
 
