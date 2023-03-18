@@ -1,5 +1,5 @@
-import { Movie } from "../type/movie.types";
-import { BASE_URL, POSTER_SIZE } from "../configs/moviesImg";
+import { Movie } from "../../type/movie.types";
+import { BASE_URL, POSTER_SIZE } from "../../configs/moviesImg";
 
 export interface MovieCardProps {
   movie: Movie;

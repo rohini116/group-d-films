@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Movie } from "../type/movie.types";
+import { Movie } from "../../type/movie.types";
 import MovieCard from "./movieCard";
 import { fetchMovies } from "./fetchMovies";
-import Loading from "../component/home/loading";
+import Loading from "../home/loading";
 
 export interface MovieListProps {
   listTitle: string;
