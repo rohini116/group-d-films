@@ -15,6 +15,7 @@ const MovieList: React.FC<MovieListProps> = ({ listTitle, url, number }) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const getMovies = async () => {
+   
     try {
       const returnMovies = await fetchMovies(url, number);
       if (returnMovies.length !== 0) {

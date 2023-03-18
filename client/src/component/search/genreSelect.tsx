@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Genre } from "../type/movie.types";
+import { Genre } from "../../type/movie.types"
 
 export interface GenreSelectProps {
   setGenre: (genre: Genre) => void;
