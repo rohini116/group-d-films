@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Genre } from "../type/movie.types";
+import { Genre } from "../../type/movie.types"
 
 export interface GenreSelectProps {
   setGenre: (genre: Genre) => void;
@@ -19,9 +19,8 @@ const GenreSelect: React.FC<GenreSelectProps> = ({ setGenre }) => {
   }, []);
 
   return (
+    <div className='genre-select'>
     <select
-      className="genreSelect"
-      name="genreSelect"
       onChange={(e) => {
         setGenre({
           id: +e.target.value,
@@ -32,11 +31,14 @@ const GenreSelect: React.FC<GenreSelectProps> = ({ setGenre }) => {
       <option value="0">All genres</option>
 
       {genres.map((genre) => (
-        <option key={genre.id} value={genre.id}>
+        <option
+          className='genre-select select-option'
+           key={genre.id} value={genre.id}>
           {genre.name}
         </option>
       ))}
     </select>
+    </div>
   );
 };
 

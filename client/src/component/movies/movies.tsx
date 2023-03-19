@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import SearchMovies from "../../search/searchMovies";
-import MovieList from "../../search/movieList";
+import SearchMovies from "../search/searchMovies";
+import MovieList from "../search/movieList";
 
 const Movies: React.FC = () => {
   let { genreId, genreName = "All" } = useParams();

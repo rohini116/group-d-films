@@ -1,5 +1,5 @@
-import { Movie } from "../type/movie.types";
-import { BASE_URL, POSTER_SIZE } from "../configs/moviesImg";
+import { Movie } from "../../type/movie.types";
+import { BASE_URL, POSTER_SIZE } from "../../configs/moviesImg";
 
 export interface MovieCardProps {
   movie: Movie;
@@ -17,7 +17,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
       <p className="movieCard__date field-style">{release_date}</p>
       <img className="movieCard__img" title={title} src={imgUrl} />
     </div>
-  );
+  );      
 };
 
 export default MovieCard;

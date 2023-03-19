@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Movie } from "../type/movie.types";
+import { Movie } from "../../type/movie.types";
 import MovieCard from "./movieCard";
 import { fetchMovies } from "./fetchMovies";
-import Loading from "../component/home/loading";
+import Loading from "../home/loading";
 
 export interface MovieListProps {
   listTitle: string;
@@ -15,6 +15,7 @@ const MovieList: React.FC<MovieListProps> = ({ listTitle, url, number }) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const getMovies = async () => {
+   
     try {
       const returnMovies = await fetchMovies(url, number);
       if (returnMovies.length !== 0) {

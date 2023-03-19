@@ -1,7 +1,7 @@
 import { useState } from "react";
 import GenreSelect from "./genreSelect";
 import { useNavigate } from "react-router-dom";
-import { Genre } from "../type/movie.types";
+import { Genre } from "../../type/movie.types";
 
 const SearchMovies: React.FC = () => {
   const [genre, setGenre] = useState<Genre>({ id: 0, name: "" });
@@ -13,20 +13,29 @@ const SearchMovies: React.FC = () => {
   };
 
   return (
-    <div className="searchMovies">
+    <div className=''>
       <form
-        className="searchMovies__Form"
         onSubmit={(e) => {
           submitHandler(e);
         }}
       >
-        <GenreSelect setGenre={setGenre} />
-        <button className="searchMovies__btn" type="submit">
-          Search
-        </button>
+        <div className='search-container search-container-skin'>
+          <GenreSelect
+            setGenre={setGenre}/>
+          <button 
+            className='container__button button--active'
+            type="submit">
+            Search
+          </button>   
+        </div>
+      
+
       </form>
     </div>
   );
 };
+
+//A form className : className="searchMovies__Form"
+//The whole section: className="searchMovies"
 
 export default SearchMovies;
