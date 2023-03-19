@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import Health from "./health";
 
-test("Given the Health, When the component is rendered, Then the text should be present", () => {
+test("Given the Health, When the component is rendered, Then the element should be present", () => {
   render(<Health />);
-  const text = screen.getByText(/Health/i);
-  expect(text).toBeInTheDocument();
+  const element = screen.getByTestId(/health/i);
+  expect(element).toBeInTheDocument();
 });
