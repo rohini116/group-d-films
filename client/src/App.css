@@ -31,6 +31,8 @@
   background: linear-gradient(50deg, orange, indigo 70%);
 }
 
+
+
 .title-style {
   font-family: 'Special Elite';
   font-weight: bolder;
@@ -145,6 +147,7 @@ footer {
 }
 
 
+/* Movie display styles */
 
 .movieList {
   position: relative;
@@ -182,7 +185,6 @@ footer {
   background-color: var(--white);
   box-shadow: 0 5px 8px 0 black;
   transition: 0.3s;
-
 }
 
 .movieCard__title {
@@ -201,18 +203,49 @@ footer {
   margin: 0;
 }
 
-/*dropdown styling*/
 
 
-
-/* Search: button and dropdown */
+/* Search panel and elements */
 .search-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  column-gap: 5%;
-  padding-top: 5%;
+  gap: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 
+.search-container-skin {
+  background-color: lavender;
+}
+ 
+
+/*Dropdown*/
+.genre-select {
+  position: relative;
+}
+
+.genre-select select {
+  
+  padding: 0.8em;
+  width: 250px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 8px 0 slategrey;
+  transition: 0.3s;
+  outline: none;
+  font-family: 'Special Elite';
+  font-size: 1.5em;
+  color: indigo;
+  background-color: white;
+}
+
+.select__option {
+  background-color: white;
+
+}
+
+/* Button*/
 .container__button {
   align-items: center;
   border: 0;
@@ -237,14 +270,32 @@ footer {
 }
 
 .container__button:focus { 
-  background-color: orange;
-  
+  background-color: orange; 
 }
 
 .container__button:hover {
   background-color: orange;
-
 }
+
+/* About styling */
+
+.about-container {
+  display: flex;
+  padding: 3% 2% 3% 2%;
+  justify-content: center;
+}
+
+.about-container__list {
+  list-style: none;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+.about-list__items {
+  padding-bottom: 2%;
+  
+}
+
 
 
 
