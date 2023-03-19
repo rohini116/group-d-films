@@ -19,8 +19,9 @@ const SearchMovies: React.FC = () => {
           submitHandler(e);
         }}
       >
-        <div className='search-container'>
-          <GenreSelect setGenre={setGenre} />
+        <div className='search-container search-container-skin'>
+          <GenreSelect
+            setGenre={setGenre}/>
           <button 
             className='container__button button--active'
             type="submit">
