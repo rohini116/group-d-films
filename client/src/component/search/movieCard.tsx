@@ -10,14 +10,14 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   const imgUrl = BASE_URL + POSTER_SIZE + poster_path;
 
   return (
-    <div className="movieCard">
-      <h4 className="movieCard__title" title={title}>
+    <div className="movieCard card__skin">
+      <div className="movieCard__title subtitle-style" title={title}>
         {title}
-      </h4>
-      <p className="movieCard__date">{release_date}</p>
+      </div>
+      <p className="movieCard__date field-style">{release_date}</p>
       <img className="movieCard__img" title={title} src={imgUrl} />
     </div>
-  );
+  );      
 };
 
 export default MovieCard;

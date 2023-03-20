@@ -1,5 +1,23 @@
+import { useParams } from "react-router-dom";
+import SearchMovies from "../search/searchMovies";
+import MovieList from "../search/movieList";
+
 const Movies: React.FC = () => {
-  return <>Movies</>;
+  let { genreId, genreName = "All" } = useParams();
+  if (genreId === "0") {
+    genreId = "";
+    genreName = "All";
+  }
+
+  const fetchUrl = `http://localhost:5000/film/by_genre?genre_ids=${genreId}`;
+  const listTitleText = `${genreName} films`;
+
+  return (
+    <div data-testid="movies" className="movies">
+      <SearchMovies />
+      <MovieList listTitle={listTitleText} url={fetchUrl} />
+    </div>
+  );
 };
 
 export default Movies;
