@@ -8,7 +8,6 @@ const Nav: React.FC = () => {
 
   return (
     <nav>
-
       <ul className="nav emphatic">
 
         <li className="nav__a">
@@ -63,9 +62,7 @@ const Nav: React.FC = () => {
             Health
           </NavLink>
         </li>
-
       </ul>
-
     </nav>
   );
 };

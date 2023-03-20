@@ -4,7 +4,6 @@ import { LOG_SERVER_OUTPUT } from "../app";
 import film from "./film";
 import genre from "./genre";
 import review from "./review";
-import user from "./user";
 import config from "./config";
 import * as homeController from "../controllers/home_controller";
 
@@ -42,11 +41,10 @@ function addAPIRoutes(app: Express) {
     next();
   });
 
-  apiRouter.use("/user", user);
-  apiRouter.use("/configuration", config);
-  apiRouter.use("/film", film);
-  apiRouter.use("/genre", genre);
-  apiRouter.use("/review", review);
+	apiRouter.use("/configuration", config);
+	apiRouter.use("/film", film);
+	apiRouter.use("/genre", genre);
+	apiRouter.use("/review", review);
 
   app.use("/", apiRouter);
 }

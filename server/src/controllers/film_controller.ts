@@ -5,8 +5,7 @@ import { handleJsonResponse, sendSuccessMessageResponse } from "./controller_uti
 export async function getTrendingFilms(req: Request, res: Response) {   
     const day = req.params.day;
     const forCurrentDay = (day === undefined || day.toLowerCase().startsWith('day'));
-    const page = req.params.page;  
-console.log(day + " " + forCurrentDay + " " + page);    
+    const page = req.params.page;   
     const result = await filmService.getTrendingFilms(forCurrentDay, page);
     handleJsonResponse(req, res, result);
 }

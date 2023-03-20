@@ -1,4 +1,5 @@
-/* Font families */
+/* font families */
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400&family=Special+Elite&display=swap');
 
 :root {
@@ -13,7 +14,6 @@
   margin: 0 auto;
   text-align: center;
 }
-
 
 /* Font and background skins */
 .emphatic {
@@ -44,6 +44,24 @@
   background: var(--purple);
   color: var(--white);
   font-family: 'Special Elite';
+}
+
+main {
+  width: 100%;
+  margin: auto;
+  padding-bottom: 3rem;
+  position: relative;
+  /*height: 1500px; */
+}
+
+header,
+main,
+footer {
+  flex-shrink: 0;
+}
+
+header {
+  position: relative;
 }
 
 footer {
@@ -100,6 +118,7 @@ footer {
     flex-flow: column wrap;
     padding: 0;
   }
+
   .nav a { 
     text-align: center;   
   } 
@@ -125,7 +144,7 @@ footer {
 }
 
 .card__skin {
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   font-weight: bold;
   color: indigo;
   background-color: var(--white);
@@ -136,7 +155,7 @@ footer {
 .movieCard__title {
   width: 100%;
   margin: 0;
-  min-height: 2rem;  
+  min-height: 2rem;
 }
 
 .movieCard__img {
@@ -148,8 +167,6 @@ footer {
   padding: 0.5rem;
   margin: 0;
 }
-
-
 
 /* Search panel and elements */
 .search-container {
@@ -164,7 +181,6 @@ footer {
 .search-container-skin {
   background-color: lavender;
 }
- 
 
 /*Dropdown*/
 .genre-select {
@@ -172,7 +188,6 @@ footer {
 }
 
 .genre-select select {
-  
   padding: 0.8em;
   width: 250px;
   border: none;
@@ -180,7 +195,7 @@ footer {
   box-shadow: 0 5px 8px 0 slategrey;
   transition: 0.3s;
   outline: none;
-  font-family: 'Special Elite';
+  font-family: "Special Elite";
   font-size: 1.5em;
   color: indigo;
   background-color: white;
@@ -188,7 +203,6 @@ footer {
 
 .select__option {
   background-color: white;
-
 }
 
 /* Button*/
@@ -215,8 +229,8 @@ footer {
   color: white;
 }
 
-.container__button:focus { 
-  background-color: orange; 
+.container__button:focus {
+  background-color: orange;
 }
 
 .container__button:hover {
@@ -239,9 +253,4 @@ footer {
 
 .about-list__items {
   padding-bottom: 2%;
-  
 }
-
-
-
-
