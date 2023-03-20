@@ -102,52 +102,22 @@ footer {
   } 
 }
 
-/* home */
-
-.home {
-  position: relative;
-  overflow: hidden;
-  min-height: 500px;
-  padding-bottom: 3rem;
-}
-
-
-.homeSearch {
-  position: relative;
-  width: 80%;
-  margin: 50px auto;
-  z-index: 1;
-}
-
-
 /* Movie display styles */
-
-.movieList {
-  position: relative;
-  color: var(--white);
-  z-index: 1;
-}
-
-.movieList__h2 {
-  margin: 2rem;
-  color: var(--orange);
-  font-family: 'Special Elite';
-}
 
 .movieList__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.2rem;
-  padding: 1.5rem 0.2rem 2rem 0.2rem;;
+  gap: 2em;
+  padding: 1.5em 0.2em 2em 0.2em;
 }
 
 .movieCard {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 15rem;
-  padding: 1.5rem 0.2rem 1rem 0.2rem;
+  width: 15em;
+  padding: 1.5em 0.2em 1em 0.2em;
   border-radius: 15px;
 }
 

@@ -3,7 +3,7 @@ import MovieList from '../search/movieList';
 
 const Home: React.FC = () => {
   return (
-   <div data-testid="home" className="home background-gradient"> 
+   <div data-testid="home" className="movieList__container background-gradient"> 
     
       <MovieList
          listTitle="Now Trending"
@@ -14,8 +14,5 @@ const Home: React.FC = () => {
     
   );
 };
-
-//Removed this code from before MovieList call
-//  <SearchMovies/>
 
 export default Home;
