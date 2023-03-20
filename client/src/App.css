@@ -1,5 +1,4 @@
-/* font families */
-
+/* Font families */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400&family=Special+Elite&display=swap');
 
 :root {
@@ -35,9 +34,9 @@
   background: linear-gradient(50deg, orange, indigo 70%);
 }
 
-.background--orange {
-  background: peachpuff;
-  color: var(--black);
+.background--neutral {
+  background: --var(white);
+  color: var(--grey);
   font-family: 'Special Elite';
 }
 
@@ -86,7 +85,7 @@ footer {
   color: orange;
 }
 
-
+/* Vertical nav for smaller screens */
 @media all and (max-width: 800px) {
   .nav {
     justify-content: space-around;
