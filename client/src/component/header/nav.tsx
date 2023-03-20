@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom";
+import logo from "../../assets/logo.jpg";
+import { Link } from "react-router-dom";
 
 const Nav: React.FC = () => {
   const activeClassName = "nav__a nav__a--active";
@@ -8,6 +10,16 @@ const Nav: React.FC = () => {
     <nav>
 
       <ul className="nav emphatic">
+
+        <li className="nav__a">
+          <Link to={`/`}>
+              <img 
+                data-testid="logo-img" 
+                src={logo} 
+                className="logo"/>
+          </Link>
+        </li>
+
         <li className="nav__a">
           <NavLink
             to={"/"}

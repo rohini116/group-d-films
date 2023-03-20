@@ -4,10 +4,12 @@ import Nav from "./nav";
 const Header: React.FC = () => {
   return (
     <header>
-      <Nav />
-      <Logo />
+     
+      <Nav /> 
     </header>
   );
 };
 
 export default Header;
+
+/* Move <Logo /> from above Nav */

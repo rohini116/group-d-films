@@ -1,4 +1,3 @@
-import SearchMovies from '../search/searchMovies';
 import MovieList from '../search/movieList';
 
 const Home: React.FC = () => {
