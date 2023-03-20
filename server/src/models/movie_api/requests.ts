@@ -19,10 +19,8 @@ export async function getMovieData<T>(url : string, params : string[], expectedF
         if(res.ok && json?.[expectedFieldName]) {                            
             return json as T;
         }
-        // if we didn't get the expected data back or it was not a success response,
-        // look for an error message
+        // if we didn't get the expected data back, look for an error message
         if(json?.["status_message"]) {
-            //const msg = <MovieServerMessage>JSON.parse(json);
             const msg = json as MovieServerMessage;
             return msg.status_message;
         } 

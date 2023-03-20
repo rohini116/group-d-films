@@ -110,22 +110,22 @@ export type SpokenLanguage = {
  *  Film objects returned by
  *  http://localhost:5000/film/trending/day
  *  http://localhost:5000/film/trending/week
- * 
- *  Also returned by
  *  http://localhost:5000/film/top_rated
+ *  http://localhost:5000/film/by_genre?genre_ids=18&page=1
  *  
  *  (https://api.themoviedb.org/3/trending/movie/day)
  *  (https://api.themoviedb.org/3/trending/movie/week)
  *  (https://api.themoviedb.org/3/movie/top_rated)
+ *  (https://api.themoviedb.org/3/discover/movie/?with_genres=16&page=1)
  */
-export type FilmList_Trending = {
+export type FilmList = {
     page?:          number;
-    results?:       Film_Trending[];
+    results?:       FilmList_Film[];
     total_pages?:   number;
     total_results?: number;
 }
 
-export type Film_Trending = {
+export type FilmList_Film = {
     adult?:             boolean;
     backdrop_path?:     string;
     id?:                number;

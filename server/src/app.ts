@@ -1,5 +1,6 @@
 import express from "express";
 import { initialiseRoutes, router } from "./routes/routes";
+import cors from "cors";
 
 export const app = express();
 
@@ -10,6 +11,7 @@ export const LOG_SERVER_OUTPUT = arr.find(arg => arg === 'log-server-output') !=
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 initialiseRoutes(app);
 
