@@ -13,7 +13,9 @@ const Health: React.FC = () => {
     getMessage();
   }, []);
 
-  return <div data-testid="health">{message}</div>;
+  return <div className='about-container background--neutral' data-testid="health"
+          >{message}
+        </div>;
 };
 
 export default Health;

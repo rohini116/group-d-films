@@ -1,15 +1,12 @@
-/* font families */
-
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400&family=Special+Elite&display=swap");
+/* Font families */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400&family=Special+Elite&display=swap');
 
 :root {
   --black: #000;
   --white: #fff;
   --grey: #666;
-  --light_grey: #c9bbd3;
   --purple: #5a0389;
   --orange: #f9882c;
-  --effect: hover 1s linear infinite;
 }
 #root {
   max-width: 1280px;
@@ -17,65 +14,41 @@
   text-align: center;
 }
 
-/* Style skins */
+
+/* Font and background skins */
 .emphatic {
-  font-family: "Special Elite";
-  font-size: x-large;
+  font-family: 'Special Elite';
+  font-size:x-large;
   font-weight: bold;
   font-size: 2em;
   background-color: var(--white);
 }
 
-.background-gradient {
-  background: linear-gradient(50deg, orange, indigo 70%);
-}
-
 .title-style {
-  font-family: "Special Elite";
+  font-family: 'Special Elite';
   font-weight: bolder;
   color: white;
 }
 
-.data__field-style {
-  font-size: 0.8em;
+.background-gradient{
+  background: linear-gradient(50deg, orange, indigo 70%);
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+.background--neutral {
+  background: --var(white);
+  color: var(--grey);
+  font-family: 'Special Elite';
 }
 
-main {
-  width: 100%;
-  margin: auto;
-  padding-bottom: 3rem;
-  position: relative;
-  /*height: 1500px; */
-}
-
-header,
-main,
-footer {
-  flex-shrink: 0;
-}
-
-header {
-  position: relative;
-}
-
-footer {
-  margin-top: auto;
+.background--indigo {
+  background: var(--purple);
+  color: var(--white);
+  font-family: 'Special Elite';
 }
 
 footer {
   height: 2rem;
   line-height: 2rem;
-  background-color: indigo;
-  color: var(--white);
-  font-size: 1em;
-  font-family: "Special Elite";
-  border-top: 1px solid rgba(217, 217, 217, 0.3);
 }
 
 /* logo */
@@ -85,8 +58,11 @@ footer {
   left: 0;
   margin: 0;
   padding: 2px 20px;
-  height: 51px;
+  max-width: 8%;
+  height: auto;
 }
+ 
+
 
 /* Navigation */
 .nav {
@@ -112,6 +88,7 @@ footer {
   color: orange;
 }
 
+/* Vertical nav for smaller screens */
 @media all and (max-width: 800px) {
   .nav {
     justify-content: space-around;
@@ -123,61 +100,32 @@ footer {
     flex-flow: column wrap;
     padding: 0;
   }
-  .nav a {
-    text-align: center;
-    padding: 2%;
-  }
-}
-
-/* home */
-
-.home {
-  position: relative;
-  overflow: hidden;
-  min-height: 500px;
-  padding-bottom: 3rem;
-}
-
-.homeSearch {
-  position: relative;
-  width: 80%;
-  margin: 50px auto;
-  z-index: 1;
+  .nav a { 
+    text-align: center;   
+  } 
 }
 
 /* Movie display styles */
-
-.movieList {
-  position: relative;
-  color: var(--white);
-  z-index: 1;
-}
-
-.movieList__h2 {
-  margin: 2rem;
-  color: var(--orange);
-  font-family: "Special Elite";
-}
 
 .movieList__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.2rem;
-  padding: 1.5rem 0.2rem 2rem 0.2rem;
+  gap: 2em;
+  padding: 1.5em 0.2em 2em 0.2em;
 }
 
 .movieCard {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 15rem;
-  padding: 1.5rem 0.2rem 1rem 0.2rem;
+  width: 15em;
+  padding: 1.5em 0.2em 1em 0.2em;
   border-radius: 15px;
 }
 
 .card__skin {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-weight: bold;
   color: indigo;
   background-color: var(--white);
@@ -188,7 +136,7 @@ footer {
 .movieCard__title {
   width: 100%;
   margin: 0;
-  min-height: 2rem;
+  min-height: 2rem;  
 }
 
 .movieCard__img {
@@ -200,6 +148,8 @@ footer {
   padding: 0.5rem;
   margin: 0;
 }
+
+
 
 /* Search panel and elements */
 .search-container {
@@ -214,6 +164,7 @@ footer {
 .search-container-skin {
   background-color: lavender;
 }
+ 
 
 /*Dropdown*/
 .genre-select {
@@ -221,6 +172,7 @@ footer {
 }
 
 .genre-select select {
+  
   padding: 0.8em;
   width: 250px;
   border: none;
@@ -228,7 +180,7 @@ footer {
   box-shadow: 0 5px 8px 0 slategrey;
   transition: 0.3s;
   outline: none;
-  font-family: "Special Elite";
+  font-family: 'Special Elite';
   font-size: 1.5em;
   color: indigo;
   background-color: white;
@@ -236,6 +188,7 @@ footer {
 
 .select__option {
   background-color: white;
+
 }
 
 /* Button*/
@@ -256,14 +209,14 @@ footer {
 }
 
 .button--active {
-  font-family: "Special Elite";
+  font-family: 'Special Elite';
   font-size: 1.5em;
   background-color: indigo;
   color: white;
 }
 
-.container__button:focus {
-  background-color: orange;
+.container__button:focus { 
+  background-color: orange; 
 }
 
 .container__button:hover {
@@ -286,4 +239,9 @@ footer {
 
 .about-list__items {
   padding-bottom: 2%;
+  
 }
+
+
+
+
