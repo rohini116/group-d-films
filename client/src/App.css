@@ -6,10 +6,8 @@
   --black: #000;
   --white: #fff;
   --grey: #666;
-  --light_grey: #c9bbd3;
   --purple: #5a0389;
   --orange: #f9882c;
-  --effect: hover 1s linear infinite;
 }
 #root {
   max-width: 1280px;
@@ -18,7 +16,7 @@
 }
 
 
-/* Style skins */
+/* Font and background skins */
 .emphatic {
   font-family: 'Special Elite';
   font-size:x-large;
@@ -27,53 +25,31 @@
   background-color: var(--white);
 }
 
-.background-gradient{
-  background: linear-gradient(50deg, orange, indigo 70%);
-}
-
-
-
 .title-style {
   font-family: 'Special Elite';
   font-weight: bolder;
   color: white;
 }
 
-.data__field-style {
-  font-size: 0.8em;
+.background-gradient{
+  background: linear-gradient(50deg, orange, indigo 70%);
 }
 
-main {
-  width: 100%;
-  margin: auto;
-  padding-bottom: 3rem;
-  position: relative;
-  /*height: 1500px; */
+.background--orange {
+  background: peachpuff;
+  color: var(--black);
+  font-family: 'Special Elite';
 }
 
-header,
-main,
-footer {
-  flex-shrink: 0;
-}
-
-header {
-  position: relative;
-}
-
-
-footer {
-  margin-top: auto;
+.background--indigo {
+  background: var(--purple);
+  color: var(--white);
+  font-family: 'Special Elite';
 }
 
 footer {
   height: 2rem;
   line-height: 2rem;
-  background-color: indigo;
-  color: var(--white);
-  font-size: 1em;
-  font-family: 'Special Elite';
-  border-top: 1px solid rgba(217, 217, 217, 0.3);
 }
 
 /* logo */
@@ -123,10 +99,8 @@ footer {
     padding: 0;
   }
   .nav a { 
-    text-align: center; 
-    padding: 2%;
-  }
-  
+    text-align: center;   
+  } 
 }
 
 /* home */
