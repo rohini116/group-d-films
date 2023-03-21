@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/logo-white.jpg";
 import { Link } from "react-router-dom";
 
 const Nav: React.FC = () => {
@@ -9,13 +9,9 @@ const Nav: React.FC = () => {
   return (
     <nav>
       <ul className="nav emphatic">
-
         <li className="nav__a">
           <Link to={`/`}>
-              <img 
-                data-testid="logo-img" 
-                src={logo} 
-                className="logo"/>
+            <img data-testid="logo-img" src={logo} className="logo" />
           </Link>
         </li>
 
