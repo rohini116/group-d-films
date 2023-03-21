@@ -13,5 +13,8 @@
     "license": "ISC",
     "dependencies": {
         "concurrently": "^7.6.0"
+    },
+    "devDependencies": {
+        "react-spinners": "^0.13.8"
     }
 }
