@@ -111,9 +111,28 @@ Linux and Macs. The node package cross-env could have been used to facilitate en
 
 ## Server Testing
 
-As this is a very simple server, which ultimately passes requests on to the Movie Database server (TMDB),
-the service layer does very little. So testing has been done on the controllers to ensure the correct data is
-returned. Testing has also been done on the low level functions.
+Testing
+-------
+Testing was done on the low level model functions, getMovieData() etc and on the
+controller layer, this ensured all requests to the server endpoints returned the correct response
+The controller tests use Supertest to send requests to the servers endpoints
+It also uses Jest.mock() to mock the service layer to mock some film responses for testing
+
+One area where more testing might have been a good idea is the routes, to ensure each
+route maps to the correct controller method. As lots of the movie DB endpoints return
+similar data, you could have two of our server routes mapping to the same controller method
+by mistake. This was checked from postman, by ensuring each possible route request resulted
+in different data being returned.
+
+Other
+-----
+The server uses the cors package to allow the client to access another server
+
+The server uses a command line arg LOG_SERVER_OUTPUT to suppress logging when it is being tested.
+When run normally the server logs useful info, such as initialisation info and the requests
+it makes to the movie DB, but when running tests, this output clutters the test output so is
+suppressed.
+
 
 
 
